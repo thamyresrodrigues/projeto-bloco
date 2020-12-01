@@ -11,10 +11,37 @@
 
 <script>
 import Map from "../components/Maps";
+import { latLng } from "leaflet";
 
 export default {
   components: {
     Map,
+  },
+    data() {
+    return {
+      items: [
+        {
+          coordenada: latLng(-22.977438568834373, -43.22376255373936),
+          nome: "Hospital Casa Sao Bernardo",
+          endereco: "",
+        },
+        {
+          coordenada: latLng(-22.894501747923233, -43.11561745194479),
+          nome: "CHN Complexo Hospitalar de Niterói",
+          endereco: "",
+        },
+        {
+          coordenada: latLng(-22.894126168786492, -43.11276358166504),
+          nome: "Hospital Icaraí",
+          endereco: "",
+        },
+        {
+          coordenada: latLng(-22.89507499827216, -43.112076936111066),
+          nome: "Hospital Universitario Antônio Pedro",
+          endereco: "",
+        },
+      ],
+    };
   },
 };
 </script>
