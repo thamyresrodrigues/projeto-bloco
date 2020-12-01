@@ -1,13 +1,5 @@
 <template>
-  
-    <b-container class="bv-example-row">
-      <b-row>
-        <b-col>1 of 3</b-col>
-        <b-col>2 of 3</b-col>
-        <b-col>3 of 3</b-col>
-      </b-row>
-    </b-container>
-  
+    <b-img class="img" src="../assets/rio.jpg" fluid alt="Responsive image"></b-img>
 </template>
 
 <script>
@@ -16,3 +8,9 @@ export default {
   components: {},
 };
 </script>
+
+<style scoped>
+img {
+  opacity: 0.5;
+}
+</style>

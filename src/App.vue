@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <Navbar/> 
+    <Navbar />
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/" />
+      <router-link to="/contato" />
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import Navbar from "./components/Navbar";
+
+export default {
+  components: {
+    Navbar
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -19,7 +29,7 @@
 }
 
 #nav {
-  padding: 30px;
+  // padding: 30px;
 
   a {
     font-weight: bold;

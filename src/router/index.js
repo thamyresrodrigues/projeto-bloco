@@ -11,17 +11,35 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
+    path: "/contato",
+    name: "Contato",
     component: () =>
-     import( "../views/About.vue")
+     import( "../views/Contato.vue")
+  },
+  {
+    path: "/delegacias",
+    name: "Delegacias",
+    component: () =>
+     import( "../views/Delegacias.vue")
+  },
+  {
+    path: "/hospitais",
+    name: "Hospitais",
+    component: () =>
+     import( "../views/Hospitais.vue")
+  },
+  {
+    path: "/eventos",
+    name: "Eventos",
+    component: () =>
+     import( "../views/Eventos.vue")
   },
   {
     path: "/navbar",
     name: "Navbar",
     component: () =>
      import("../components/Navbar.vue")
-  } 
+  }
 ];
 
 const router = new VueRouter({
