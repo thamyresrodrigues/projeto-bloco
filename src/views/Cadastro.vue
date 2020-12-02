@@ -1,18 +1,22 @@
 <template>
 <div>
   <h3 class="pad-top">
-    Send your opinion
+    Create an account
   </h3>
-    <form @submit="onSubmit" v-if="show" class="form">
+  <form class="form">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input v-model="form.name" required type="text" class="form-control" id="name" />
+      <input
+        required
+        type="text"
+        class="form-control"
+        id="name"
+      />
     </div>
     <div class="form-group">
       <label for="email">Email address:</label>
       <input
         required
-        v-model="form.email"
         type="email"
         class="form-control"
         id="email"
@@ -20,43 +24,27 @@
       />
     </div>
     <div class="form-group">
-      <label for="textarea1">Message:</label>
-      <textarea
-        required
-        v-model="form.textarea"
+      <label for="password">Password</label>
+      <input
+        type="password"
         class="form-control"
-        id="textarea1"
-        rows="4"
-      ></textarea>
+        id="password"
+      />
     </div>
-
+     <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
     <button type="submit" class="btn btn-primary btn-form">Submit</button>
   </form>
 </div>
-
-
 </template>
 
+
 <script>
-export default {
-  data() {
-    return {
-      form: {
-        email: "",
-        name: "",
-        textarea: "",
-      },
-      show: true,
-    };
-  },
-  methods: {
-    onSubmit(evt) {
-      evt.preventDefault();
-      alert(JSON.stringify(this.form));
-    }
-  },
-};
+export default {};
 </script>
+
 <style>
 .form {
   width: 80%;
@@ -67,6 +55,7 @@ export default {
 }
 .btn-form {
   margin-right: 25px;
+  margin-top: 25px;
 }
 .pad-top{
   padding-top: 15px;

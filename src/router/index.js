@@ -39,7 +39,19 @@ const routes = [
     name: "Navbar",
     component: () =>
      import("../components/Navbar.vue")
+  },
+  {
+    path: "/cadastro",
+    name: "Cadastro",
+    component: () =>
+     import("../views/Cadastro.vue")
+  },  {
+    path: "/login",
+    name: "Login",
+    component: () =>
+     import("../views/Login.vue")
   }
+
 ];
 
 const router = new VueRouter({

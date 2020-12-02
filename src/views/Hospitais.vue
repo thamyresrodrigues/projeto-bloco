@@ -1,10 +1,17 @@
 <template>
   <b-container class="bv-example-row">
-    <b-row>
-      <b-col><Map/><span class="pad">Lorem ipsum dolor uia fugit iste quod nisi? Exercitatnem, quibusdam.</span></b-col>
-      <b-col><Map /><span class="pad">Lorem ipsum dolor uia fugit iste quod nisi? Exercitatnem, quibusdam.</span></b-col>
-      <b-col><Map /><span class="pad">Lorem ipsum dolor uia fugit iste quod nisi? Exercitionem, quibusdam.</span></b-col>
-      <b-col><Map /><span class="pad">Lorem ipsum dolor uia fugit iste quod nisi? Exertationem, quibusdam.</span></b-col>
+    <b-row v-for="item in items" :key="item.nome">
+      <b-col>
+        <Map :item="item" />
+      </b-col>
+      <b-col>
+        <div class="div-lorem">
+          <strong><p>{{ item.nome }}</p></strong>
+          <p>Endereco: {{ item.endereco }}</p>
+          <p>Horario de Funcionamento: {{ item.horario }}</p>
+          <p>Contato: {{ item.telefone }}</p>
+        </div>
+      </b-col>
     </b-row>
   </b-container>
 </template> 
@@ -17,28 +24,36 @@ export default {
   components: {
     Map,
   },
-    data() {
+  data() {
     return {
       items: [
         {
-          coordenada: latLng(-22.977438568834373, -43.22376255373936),
-          nome: "Hospital Casa Sao Bernardo",
-          endereco: "",
+          coordenada: latLng(-22.977382321015533, -43.224022013842635),
+          nome: "Hospital Municipal Miguel Couto",
+          endereco: 'Leblon, Rio de Janeiro - RJ, 22793-260',
+          horario: '24 horas',
+          telefone: '2596-0089'
         },
         {
-          coordenada: latLng(-22.894501747923233, -43.11561745194479),
-          nome: "CHN Complexo Hospitalar de Niterói",
-          endereco: "",
+          coordenada: latLng(-22.900619093887563, -43.27795142280398),
+          nome: "Hospital Municipal Salgado Filho",
+          endereco: 'R. Arquias Cordeiro, 370 - Méier, Rio de Janeiro - RJ, 20770-000',
+          horario: '24 horas',
+          telefone: '3111-4100'
         },
         {
-          coordenada: latLng(-22.894126168786492, -43.11276358166504),
-          nome: "Hospital Icaraí",
-          endereco: "",
+          coordenada: latLng(-22.86709593589926, -43.2483362811155),
+          nome: "Hospital Geral de Bonsucesso",
+          endereco: 'Av. Londres, 616 - Bonsucesso, Rio de Janeiro - RJ, 21041-020',
+          horario: '24 horas',
+          telefone: '3977-9502'
         },
         {
-          coordenada: latLng(-22.89507499827216, -43.112076936111066),
-          nome: "Hospital Universitario Antônio Pedro",
-          endereco: "",
+          coordenada: latLng(-22.99446009127222, -43.36252396071194),
+          nome: "Hospital Municipal Lourenço Jorge",
+          endereco: 'Leblon, Rio de Janeiro - RJ, 22793-260',
+          horario: '24 horas',
+          telefone: '2596-0089'
         },
       ],
     };
@@ -47,7 +62,11 @@ export default {
 </script>
 
 <style>
-.pad{
+.pad {
   margin-left: 10px;
+}
+.div-lorem {
+  margin-top: 55px;
+  text-align: left;
 }
 </style>
